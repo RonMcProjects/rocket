@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
 import math
+import sys
 
 # REM ROCKET.BAS by Brian Tung
 # REM
 A = 1.032 # REM Earth gravity in light-years per year squared
-while True:
+try:
+    D = float(sys.argv[1])
+except IndexError:
+    D = -1.0
+while (D < 0.0) or (D > 100000000.0):
     D = float(input("Distance in light-years (0-100 million): "))
-    if ((D >= 0.0) and (D <= 100000000.0)):
-            break
 D1 = D / 2.0
 T = math.sqrt(D1*D1 + (2.0*D1/A))
 X = A * T

@@ -11,11 +11,19 @@ And a write-up by the author is here:
 https://www.thefreelibrary.com/Relativistic+Travel%3A+To+the+Stars+in+a+Lifetime.-a097055409
 
 ## Usage
+### Enter the distance when prompted.
 ```
-$ ./rocket.py 
+$ ./rocket.py
 Distance in light-years (0-100 million): 25000
 Time on Earth: 000025001.938 years
 Time on board: 000000019.686 years
     Top speed: 0.99999999700 c
+```
+### Or pass in the distance as an argument.
+```
+$ ./rocket.py 4.37
+Time on Earth: 000000006.003 years
+Time on board: 000000003.583 years
+    Top speed: 0.95163619079 c
 ```
 You can also enter a fraction of a light-year for values < 1.
